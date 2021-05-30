@@ -1,0 +1,219 @@
+body {
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;   /* მთლიანი გვერდი იყოს სვეტად ჩამოწერილი */
+  height: 100vh;
+
+}
+
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+@keyframes header-animation {
+    0% {background-position: center left;}
+    100% {background-position: right center;}
+
+
+}
+
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    10%  {left:0px; top:300px;}
+    20%  {left:0px; top:50px;}
+    30%  {left:0px; top:300px;}
+    40%  {left:0px; top:100px;}
+    50%  {left:0px; top:300px;}
+    60%  {left:0px; top:150px;}
+    70%  {left:0px; top:300px;}
+    80%  {left:0px; top:200x;}
+    100% {left:0px; top:300px;}
+  }
+  
+.ball {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white
+    
+    
+    
+
+
+
+}
+
+.div-ball {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: relative;       /* absolute */
+    animation-name: example;
+    animation-duration: 5s;
+ 
+   
+    
+}
+.container {
+    min-width: 600px;
+    width: 70%;    /* სიგანეზე რამხენ პროცენტზე გაიწელოს */
+    margin: 0 auto;
+    
+    
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+    
+}
+
+.content > main {
+    flex-grow: 2;
+    outline: 2px solid red;
+    margin-left: 8px;     /* დაშორდეს გვერდითა ჩარჩოს */
+    flex-basis: 30%;     /* რამდენიც არუნდა ეწეროს დაიკავებს ამდენ ადგილს */
+
+}
+.content > aside {
+    flex-grow: 1; 
+    outline: 2px solid green;     /* ვიზუალურად სანახავად ჩარჩოში ჩასმა */
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* ტექსტი ზემოდან ქვემოთ მოექცეს ცენტრში  */
+    align-items: center;     /* ტექსტი მაცხნიდან მარჯვნივ მოექსეს ცენტრში */
+    background-image: url(https://picsum.photos/id/1029/5000/500);
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    animation: header-animation 3s ease-in-out infinite alternate;  /* infinite უსასრულოდ იმოძრაოს. alternate რაგზითც წავა ისე დაბრუნდება */
+    
+    
+}
+
+.header > h1 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+
+/* Navbar */
+.navbar {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;      /*ჩამონათვალი მწკივად დაწერე */
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.navbar > ul {
+    list-style: none;   /* ჩამონათვალს წინ წერტილები მოვაშორეთ */
+    padding: 0;
+    margin: 0;
+    
+
+
+}
+
+.navbar-item {
+    display: inline-block;    /* ბლოკურად სიგანეზე  */
+    background-color: #999;
+    margin-left: 8px;
+    transition:   transform  250ms ease-in , text-decoration 250ms, linear;
+    border-radius: 6px;
+    margin-top: 8px;
+    
+}
+
+
+.navbar-item > a {
+    padding: 8px 12px;    /*  */
+    display: inline-block;
+    color: white;
+    
+    
+   
+}
+
+.navbar-item:hover {
+    outline: 1px solid #fff;
+    transform: scale(1.1, 1.1) translatey(-2px);   /* scala - გაგიგდეს აითმი,   translatey - ზევით აიწიოს   */
+    
+
+}
+.navbar-item:active > a {   /* დაკლიკების დროს რაქნას */
+    transform: scale(1.2, 1.2);         /* ტრანსფორმაცია განიცადოს გადოს*/
+        
+    text-decoration: underline;  /* ქვევიდან გაესვას ხაზი დაჭერის დროს */
+}
+.footer > p {
+    margin: 0;
+}
+
+.footer {
+    background-color: #999;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    
+
+}
+.panel {
+    border: 1px solid #333;
+    background-color: #ddd;
+    border-radius: 4px;         /* ჩარჩოს მომრგვალება */
+    
+
+}
+.panel-header {
+
+    background-color: #bbb;
+}
+
+
+
+.panel-header,
+.panel-body {
+
+    padding: 6px 12px;
+}
+
+.panel-body > ul,
+.panel-body > li {
+
+   padding-left: 8px; 
+   margin: 0;
+}
+
+.footer a {
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
